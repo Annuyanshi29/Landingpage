@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Bootstrap link-->
+
+    <!--Font Awesome Cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Font Awesome Cdn-->
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Lato', sans-serif;
+
+}
+
+/*Navbar start*/
+#navbar{
+    background: #f9f9f9;
+}
+#logo{
+    font-size: 36px;
+    font-weight: 550;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+#logo span{
+    color: #ffa500;
+}
+.navbar-toggler span{
+    color: #ffa500;
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background: #ffa500;
+    color: white;
+}
+#navbar form button{
+    background: orange;
+    color: white;
+    border: none;
+}
+/*Navbar end*/
+
+/*Home Section Start*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(https://www.tourism-rajasthan.com/wp-content/uploads/2021/12/Hill-Station-in-rajasthan_opt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .content{
+    text-align: center;
+    padding: 200px;
+}
+.home .content h5{
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+.home .content h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after{
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: changetxt 10s infinite linear;
+}
+@keyframes changetxt{
+    0%{content: "France";}
+    10%{content: "Spain";}
+    20%{content: "United States";}
+    30%{content: "China";}
+    40%{content: "India";}
+    50%{content: "Canada";}
+    60%{content: "Italy";}
+    70%{content: "Turkey";}
+    80%{content: "Maxico";}
+    90%{content: "Germany";}
+    100%{content: "United Kingdom";}
+
+}
+.home .content p{
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.home .content a{
+    padding: 10px;
+    background: white;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.home .content a:hover{
+    background: #ffa500;
+    color: white;
+}
+@media (max-width:850px){
+    .home{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .home .content h5{
+        font-size: 25px;
+    }
+    .home .content h1{
+        font-size: 38px;
+    }
+    .home content p{
+        font-size: 13px;
+    }
+}
+/*Home Section End*/
+
+/* Section Book Start*/
+.book{
+    background: #f9f9f9;
+    padding: 50px;
+}
+.main-text h1{
+    text-align: center;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+.main-text h1 span{
+    color: #ffa500;
+}
+.book .card{
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 6px black;
+}
+.book .row{
+    margin-top: 30px;
+}
+.book form input{
+    padding: 10px;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px -6px black;
+}
+.book form textarea{
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0px 5px 5px -6px black;
+    height: 200px;
+}
+.book .submit{
+    width: 160px;
+    font-size: 16px;
+    font-weight: 550;
+    background: #ffa500;
+    color: white;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.book .submit:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        margin-top: 20px;
+    }
+}
+
+/* Section Book End*/
+
+/*Section Packages Start*/
+.main-txt h1{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+.main-txt h1 span{
+    color: #ffa500;
+}
+.packages .card{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.packages .card img{
+    border-radius: 5px;
+}
+.packages .card.card-body{
+    background: transparent;
+}
+.packages .card .card-body h3{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    transition: all;
+}
+.packages .card.card-body p{
+    font-size: 15px;
+}
+.checked{
+    color: #ffa500;
+}
+.star i{
+    font-size: 15px;
+}
+.packages .card .card-body h6{
+    font-size: 20px;
+}
+.packages .card .card-body a{
+    padding: 10px;
+    text-decoration: none;
+    background: #ffa500;
+    color: #f9f9f9;
+    border-radius: 5px;
+
+}
+/*Section Packages End*/
+
+
+
+/*Section Services Start*/
+.services{
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+.services .card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.services .card i{
+    font-size: 80px;
+    text-align: center;
+    color: #ffa500;
+    margin-top: 20px;
+}
+.services .card .card-body h3{
+    font-weight: 600;
+    text-align: center;
+}
+.services .card.card-body{
+    text-align: center;
+}
+/*Section Services End*/
+
+/*Section Gallary Start*/
+.gallary{
+    margin-top: 50px;
+}
+.gallary .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.gallary .card img{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.gallary .card img:hover{
+    transform: scale(1.1);
+}
+/*Section Gallary End*/
+
+/*About Start*/
+.about{
+    margin-top: 50px;
+    background: #f9f9f9;
+}
+.about .card{
+    border-radius: 10px;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa500;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .about{
+       padding: 0; 
+    }
+}
+/*About End*/
+
+/*footer Start*/
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #f9f9f9;
+}
+#footer h1{
+    font-weight: 600;
+    padding: 30px;
+    text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+    color: #ffa500;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #ffa500;
+}
+
+
+
+
+/*footer End*/
+    </style>
+</head>
+<body>  
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,300;1,400&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!--Google Fonts-->
+
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"id="logo"><span>T</span>ravel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#book">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#packages">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!--Navbar End-->
+
+    <!--Home Section Start-->
+    <div class="home">
+        <div class="content">
+            <h5>Welcome To World</h5>
+            <h1>Visit <span class="changecontent"></span></h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#book">Book Place</a>
+        </div>
+    </div>
+    <!--Home Section End-->
+
+    <!-- Section Book Start-->
+    <section class="book" id="book">
+        <div class="container">
+            <div class="main-text">
+                <h1><span>B</span>ook</h1>
+            </div>
+            <div class="row">
+              <div class="col-md-6 p-3 py-md-0">
+                <div class="card">
+                  <img src="C:\Users\Lenovo\AppData\Local\Temp\Temp6120d780-f427-4138-9fd8-df7564c66789_images-6 (2).zip\images\book-img.png" alt="" width="600px" height="544px">
+                </div>
+              </div>
+              <div class="col-md-6 p-3 py-md-0">
+                <form sction="#">
+                  <input type="text" class="form-control" placeholder="Where To" required><br>
+                  <input type="text" class="form-control" placeholder="How Many" required><br>
+                  <input type="date" class="form-control" placeholder="Arrival" required><br>
+                  <input type="date" class="form-control" placeholder="Leaving" required><br>
+                  <textarea class="form-control" rows="5" name="text" placeholder="Enter your Name & Details"></textarea><br>
+                  <input type="submit" value="Book Now" class="submit" required>
+                </form>
+              </div>   
+            </div>
+        </div>
+    </section>
+    <!-- Section Book End-->
+
+    <!--Section Packages Start-->
+    <section class="packages" id="packages">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>P</span>ackages</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/08/big-ben.jpg" alt="">
+              <div class="card-body">
+                <h3>United Kingdom</h3>
+                <p>One of the most significant places to visit in UK in summer is the <b>Big Ben</b>. It is, in fact, the name of the clock tower which is located near the Westminster Abbey in central London.The place has been declared a UNESCO World Heritage Site and is visited by hordes of tourists every year waiting to get clicked in front of it.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?cs=srgb&dl=pexels-thorsten-technoman-338515.jpg&fm=jpg" alt="">
+              <div class="card-body">
+                <h3>France</h3>
+                <p><b>The Eiffel Tower</b> in <b>Paris</b>, France, has serious celeb status. Completed in March 1889, it's one of the most recognizable monuments in the world. And the site, which is also known as the Iron Lady, receives nearly seven millions tourists a year. But despite its fame, the tower has some monumental secrets. It's currently the most famous symbol of Paris.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://cdn.britannica.com/20/189820-050-D650A54D/Red-Fort-Old-Delhi-India.jpg" alt="" width="415px" height="280px">
+              <div class="card-body">
+                <h3>India</h3>
+                <p><strong>Red Fort</strong> of Delhi is a very popular historical monument as national flag is hoisted on 15th August and 26th January on the auspicious occasion of Independence Day and Republic Day respectively.The fort was constructed by Shah Jahan, the fifth Mughal emperor. The construction of the fort was started in 1639 and completed in 1648.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://i.natgeofe.com/n/e33a11df-2b20-4a7d-bb16-f44c09ecfd8a/gondola-mont-blanc-france.jpg" alt="">
+              <div class="card-body">
+                <h3>Italy</h3>
+                <p>Tucked away in the northwest corner of Italy is a fantastic landscape of snowcapped mountains, quaint towns, and even a few castles. The Alps run through this section of Italy, and sitting on the border of France and Switzerland are two very famous mountains, <b>Mont Blanc and the Matterhorn</b>.One of the most unique things to do is to ride the Panoramic Mont-Blanc cable car that runs from Pointe Hellbronner, Italy to Aiguille du Midi, France. This is a 5 km one-way journey that is filled with views of glaciers and incredible views of the Alps.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://images.adsttc.com/media/images/5254/4190/e8e4/4eff/0200/06cf/large_jpg/sfpassio.jpg?1381253501" alt=""width="415px" height="280px">
+              <div class="card-body">
+                <h3>Spain</h3>
+                <p><b>The Basilica de la Sagrada Familia</b>, more commonly referred to as the Sagrada Familia, is a Roman Catholic minor basilica located in Barcelona. The story of this still-under-construction masterpiece began all the way back in 1874 when a local organization began campaigning for the construction of a church honoring the Holy Family. The church's cornerstone was officially laid on 19th March 1882. This 19th-century church, which is still incomplete, is an architectural marvel and a UNESCO World Heritage site.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://cdn.britannica.com/95/94195-050-FCBF777E/Golden-Gate-Bridge-San-Francisco.jpg" alt="" width="415px" height="280px">
+              <div class="card-body">
+                <h3>United State</h3>
+                <p><b>The Golden Gate Bridge</b> is the second longest suspension bridge in the US and ninth longest in the world. It has a 1,280m long bridge span and connects San Francisco and Marin County.The bridge was opened in 1937.It stands 227m above water level and replaced the ferry service between San Francisco and Marin County.The bridge stands as an important symbol of recognition for San Francisco, California, and the United States. A public agency called Golden Gate Bridge, Highway and Transportation District owns, operates and maintains the bridge.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://cdn.britannica.com/82/94382-050-20CF23DB/Great-Wall-of-China-Beijing.jpg" alt="">
+              <div class="card-body">
+                <h3>China</h3>
+                <p><b>The Great Wall of China</b> is an ancient series of walls and fortifications, totaling more than 13,000 miles in length, located in northern China. Perhaps the most recognizable symbol of China and its long and vivid history, the Great Wall was originally conceived by Emperor Qin Shi Huang in the third century B.C. as a means of preventing incursions from barbarian nomads. The best-known and best-preserved section of the Great Wall was built in the 14th through 17th centuries A.D., during the Ming dynasty.It came to function as a powerful symbol of Chinese civilization’s enduring strength.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/3Falls_Niagara.jpg" alt=""width="415px" height="280px">
+              <div class="card-body">
+                <h3>Canada</h3>
+                <p><b>Niagara Falls</b>, waterfall on the Niagara River in northeastern North America, one of the continent’s most famous spectacles.Large torrents of water were unleashed from melting glaciers more than 12,000 years ago, spilling into the Niagara River. The falls lie on the border between Ontario, Canada, and New York state, U.S. For many decades the falls were an attraction for honeymooners and for such stunts as walking over the falls on a tightrope or going over them in a barrel. Increasingly, however, the appeal of the site has become its beauty and uniqueness as a physical phenomenon.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/09/playa-del-carmen.jpg" alt="" width="415px" height="280px">
+              <div class="card-body">
+                <h3>Maxico</h3>
+                <p>It is the most popular place <b>Playa del Carmen
+                </b> in Maxico. It’s one of the up and coming places— you will find the hippest scene here at Playa del Carmen, or just Playa, it is one of the charms of the entire Yucatán Peninsula. If you are looking for lively bars, or just to have a sip of a cuppa at a chic cafés, it is here at Playa. You get timeshares, as well as all inclusive resorts that are open all across the city. Another interesting factor is the large expat community of Playa that has been growing ever since 1900s, they sure do have their influences on local Playa culture and flavor.</p>
+                <div class="star">
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star checked"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <h6>Price: <strong>$500</strong></h6>
+                <a  href="#book">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section Packages End-->
+
+    <!--Section Services Start-->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>S</span>ervices</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3-md-0">
+            <div class="card">
+              <i class="fas fa-hotel"></i>
+              <div calss="card-body">
+                <h3>Affordable Hotel</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3-md-0">
+            <div class="card">
+              <i class="fas fa-utensils"></i>
+              <div calss="card-body">
+                <h3>Food & Drinks </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3-md-0">
+            <div class="card">
+              <i class="fas fa-bullhorn"></i>
+              <div calss="card-body">
+                <h3>Safety Guide</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3-md-0">
+            <div class="card">
+              <i class="fas fa-globe-asia"></i>
+              <div calss="card-body">
+                <h3>Around The world</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 py-3-md-0">
+            <div class="card">
+              <i class="fas fa-plane"></i>
+              <div calss="card-body">
+                <h3>Fastest Travel </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3-md-0">
+
+            <div class="card">
+              <i class="fas fa-hiking"></i>
+              <div calss="card-body">
+                <h3>Adventure</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit minima cum possimus rerum exercitationem quis, nemo officia, amet quia fuga illum eos vel sapiente incidunt quisquam quam ab. Sed, eaque.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section Services End-->
+
+    <!--Section Gallary Start-->
+    <section class="gallary" id="gallary">
+      <div class="container">
+        <div class="main-txt">
+          <h1><span>G</span>allary</h1>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://www.touropia.com/gfx/b/2010/06/chichen_itza-1.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://c.myholidays.com/blog/blog/content/images/2021/01/Places-To-Visit-In-Italy.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2018/01/OG5.jpg" alt="" height="280px">
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://www.atlastravel.in/blog/wp-content/uploads/2018/10/Las-Vegas-Nevada.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://adm.dookinternational.com/dook/images/poi/3lyMRqkI1624345012.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://media.cntraveller.com/photos/611befd2ae2ff768cb25326d/16:9/w_3200,h_1800,c_limit/turkey.jpg" alt="" height="280px">
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/10/07122140/Canada-tourist-places-to-visit-686x400.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/places-to-visit-in-north-india.jpg" alt="" height="280px">
+            </div>
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+              <img src="https://etimg.etb2bimg.com/photo/93896068.cms" alt="" height="280px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Section Gallary End-->
+
+    <!--About Start-->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="main-txt">
+          <h1>About<span>Us</span></h1>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+              <img src="C:\Users\Lenovo\AppData\Local\Temp\Temp8269625b-e8af-495f-a625-2ef2248ac3bb_images-6 (2).zip\images\about-img.png"alt="" width="650px" height="500px">
+            </div>
+          </div>
+
+          <div class="col-md-6 py-3 py-md-0">
+            <h2>How Travel Agency Work</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi asperiores suscipit perferendis, incidunt aliquam blanditiis adipisci praesentium error temporibus iste nulla ipsa beatae exercitationem, ipsam quidem explicabo quam? Exercitationem!</p>
+            <button id="about-btn">Read More....</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--About End-->
+
+    <!--Footer Start-->
+    <footer id="footer">
+      <h1><span>T</span>ravel</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur veritatis maiores at optio beatae iure accusamus fugiat, blanditiis ullam, placeat temporibus voluptatem, obcaecati amet? Adipisci reiciendis velit excepturi modi a?</p>
+      <div class="social-links">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+      <div class="copyright">
+        <p>&copy;Copyright Anushka.All Rights Reserved</p>
+      </div>
+    </footer>
+    <!--Footer End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+    </script>  
+</body>
+</html>
